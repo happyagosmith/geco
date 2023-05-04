@@ -1,0 +1,10 @@
+key1: [[ .m1 ]]
+key2: v2
+key4: 
+  key4-1: v4-1
+  key4-2: v4-2
+key6:
+  - a
+key7:
+  - t1: 1
+    t2: 2

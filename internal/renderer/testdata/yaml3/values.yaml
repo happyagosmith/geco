@@ -1,0 +1,38 @@
+#Test1 with title
+#section description and one scalar parameter
+param1.1: "default1.1" #desc1.1
+
+#Test2 parameter without description
+param2.1: "default2.1"
+
+#Test3 map
+param3: 
+  # head comment
+  child1: "default3.1" #desc3.1
+  child2: "default3.2" #desc3.2
+
+#Test4 map with items as default values
+param4: #desc4
+  child1: "default4.1" 
+  child2: "default4.2"
+
+#Test5 empty map
+param5: {} #desc5
+
+#Test6 array
+param6:  #desc6
+  - key1: value1
+    key2: value2
+
+#Test7 empty array
+param7: [] #desc7
+
+#Test8 annidate map
+param8: 
+  childs: #desc8 
+    child1: "default8.1" 
+    child2: "default8.2"
+
+param9: 
+  child: "no section"
+

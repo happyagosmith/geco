@@ -1,0 +1,1 @@
+this is the parsed template 1 inside the nested folder with [[.template1]]
