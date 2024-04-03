@@ -1,0 +1,30 @@
+name: Build and Release
+on:
+  push:
+    tags:
+      - '*'
+env:
+  APP_NAME: geco
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Get dependencies
+        run: go mod download
+
+      - name: Test
+        run: go test -v ./...
+
+      - name: Build
+        run: go build -ldflags "-X main.version=${GITHUB_REF#refs/tags/}"
